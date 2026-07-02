@@ -49,4 +49,4 @@ The first detector focuses on rotation-to-block precision:
 - runs the configured punishment (warn staff, kick, ban, or custom command) when a player reaches a score of 100.
 
 This is intentionally evidence-based. Server-side observation cannot honestly guarantee perfect Baritone detection, so the plugin reports suspicious precision patterns with context for staff review.
->>>>>>> f3c02da (Add command punishment, require score 100, improve visuals and comments)
+

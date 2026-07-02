@@ -1,11 +1,4 @@
-# AntiBaritone
-<<<<<<< HEAD
-A paper 1.21.* plugin designed to flag players using the baritone bot.
--------------------
-this is a work in progress. come back soon!
-=======
 
-Author: Starry
 
 AntiBaritone is a Paper/Bukkit plugin for Minecraft 1.21.x servers that flags players whose block interaction rotations look like Baritone bot rotations.
 

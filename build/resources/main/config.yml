@@ -1,0 +1,63 @@
+# AntiBaritone watches for Baritone-like rotation precision around block interactions.
+# It does not ban by default; it flags with evidence so staff can review.
+
+alert-threshold: 13.0
+severe-threshold: 23.0
+score-decay-per-minute: 1.25
+
+sample-window-ticks: 140
+minimum-samples-for-alert: 6
+alert-cooldown-seconds: 20
+
+# What to do when a player reaches the alert threshold.
+# Options: warn_staff, kick, ban
+punishment: warn_staff
+punishment-reason: Baritone bot detection
+
+# Angular distance between the player's look vector and likely Baritone block target points.
+precise-angle-degrees: 0.22
+good-angle-degrees: 0.45
+
+# Base evidence values. These apply to every block, not just ores.
+precise-hit-score: 2.35
+good-hit-score: 1.05
+sharp-snap-score: 1.25
+damage-action-score: 0.35
+break-action-score: 0.55
+place-action-score: 0.75
+use-action-score: 0.45
+
+# Fast snap immediately before damaging/breaking a block.
+sharp-snap-min-yaw-degrees: 12.0
+sharp-snap-min-pitch-degrees: 4.0
+sharp-snap-window-ticks: 4
+
+# Baritone often rotates almost instantly to the next target immediately after a block breaks.
+post-break-snap-min-yaw-degrees: 18.0
+post-break-snap-min-pitch-degrees: 7.0
+post-break-snap-window-ticks: 5
+post-break-snap-score: 2.75
+
+# Detect straight, low-height excavation patterns used by #tunnel.
+tunnel-detection-enabled: true
+tunnel-window-ticks: 500
+tunnel-min-breaks: 10
+tunnel-min-depth-blocks: 5
+tunnel-width-tolerance-blocks: 2
+tunnel-height-tolerance-blocks: 2
+tunnel-pattern-score: 4.5
+tunnel-score-cooldown-ticks: 120
+
+# Context multipliers. Ore is only a bonus because Baritone has many non-mining functions.
+generic-block-multiplier: 1.0
+ore-multiplier: 1.15
+valuable-ore-multiplier: 1.3
+
+# Do not score creative/spectator players.
+ignore-creative: true
+
+# Broadcast alerts to players with antibaritone.alert.
+broadcast-alerts: true
+
+# Log alerts to console.
+log-alerts: true

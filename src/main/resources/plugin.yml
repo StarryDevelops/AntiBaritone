@@ -1,0 +1,22 @@
+name: AntiBaritone
+version: '${version}'
+main: starry.antibaritone.AntiBaritonePlugin
+api-version: '1.21'
+author: Starry
+description: A paper 1.21.* plugin designed to flag players using the baritone bot.
+commands:
+  antibaritone:
+    description: Inspect and manage AntiBaritone evidence.
+    usage: /antibaritone <status|reset|reload> [player]
+    permission: antibaritone.command
+  punishment:
+    description: Set punishment for Baritone users.
+    usage: /punishment <kick|ban|warn staff>
+    permission: antibaritone.command
+permissions:
+  antibaritone.command:
+    description: Allows use of AntiBaritone commands.
+    default: op
+  antibaritone.alert:
+    description: Receives AntiBaritone alerts.
+    default: op

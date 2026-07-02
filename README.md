@@ -1,4 +1,4 @@
-
+# AntiBaritone
 
 AntiBaritone is a Paper/Bukkit plugin for Minecraft 1.21.x servers that flags players whose block interaction rotations look like Baritone bot rotations.
 
